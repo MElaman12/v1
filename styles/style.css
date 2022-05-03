@@ -1,0 +1,277 @@
+/* import fonts */
+@import url(../fonts/fonts.min.css);
+
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: 2.3s;
+    -webkit-transition: 2.3s;
+    -moz-transition: 2.3s;
+    -ms-transition: 2.3s;
+    -o-transition: 2.3s;
+}
+
+body{
+    background-color: #0e0f3a;
+    height: 1200vh;
+}
+
+p,span,a,div,button{font-family: gilroy-semibold !important;}
+p::selection,span::selection,a::selection,button::selection,div::selection,img::selection{
+    color: #ffff00a1;
+    background: #e5ff003f;
+}
+
+/* партиклы */
+#particles-js{
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    z-index: -111;
+}
+/* кружочек рядом с мышкой */
+.circle{
+    position: absolute;
+    z-index: -1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow:  0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+}
+
+
+/* стили сына хидора */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* logo some style */
+#header .header .lg span{
+    color: #fff;
+    font-size: 20px;
+}
+
+.header .links{
+    display: flex; align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    padding: 10px 0;
+    z-index: 111;
+    position: relative;
+    overflow: hidden;
+}
+
+.header .links::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 40px;
+    height: 1000px;
+    background-color: #0f9bb4;
+    transition: 2s;
+    animation: animate 5s linear infinite;
+}
+
+#header .header .links .time img{
+    width: 70px;
+    border-left : 1px solid #0f9bb4;
+    padding: 3px;
+}
+
+.header .links::after{
+    content: '';
+    position: absolute;
+    background-color: #0e0f3a;
+    inset: 4px;
+    transition: 0.5s;
+}
+
+/* div time styles */
+#header .header .links .time{display: flex; align-items: center; justify-content: center;}
+#header .header .links .time span{
+    color: #fff;
+    font-size: 22px;
+    position: relative;
+    z-index: 11;
+}
+
+/* короче это анимация той штуки которая кружется у хидера хыыыыыы */
+@keyframes animate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.header .links a{
+    position: relative;
+    z-index: 1;
+    font-size: 22px;
+    color: #0f9bb4;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 0;
+    transition: 500ms;
+}
+
+#header .links a:hover{
+    text-decoration: underline;
+}
+
+/* TODO: settings*/
+#header .header .settings img{
+    width: 60px;
+    height: 60px;
+    transition: .4s linear;
+    cursor: pointer;
+}
+
+#header .header .settings img:hover{transform: rotate(20deg);}
+
+#header .header .settings .st_b .tre{
+    position: absolute;
+    left: 52.5px;
+    top: -35px;
+    border: 17px solid transparent;
+    border-top: 23px solid #0e1068;
+    z-index: 111;
+    transform: rotate(180deg);
+}
+
+#header .header .settings .st_b{
+    width: fit-content;
+    height: fit-content;
+    padding: 7px;
+    background: #0e1068;
+    border-radius: 5px;    
+    position: absolute;
+    top: -200px;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    transition: 300ms ease;
+}
+#header .header .settings .st_b button:nth-child(2):hover{
+    transform: rotate(3deg);
+}
+
+#header .header .settings .st_b button:hover{
+    letter-spacing: 0.4px;
+    transform: rotate(-3deg);
+    color: #fff;
+    font-size: 17px;
+    border: 1px solid #fff;
+}
+
+/* settings icon */
+#header .header .settings .st_b button img{
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+#header .header .settings .st_b button{
+    padding: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+    display: flex; align-items: center;
+    margin: 5px 0;
+    background: transparent;
+    border: 1.5px solid #0f9bb4;
+    cursor: pointer;
+}
+/*-------------------------------- END header styles --------------------------------*/
+
+/* wrapper and wrapper sons style */
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.wrapper .welcomeText{
+    display: flex; align-items: center;flex-direction: column;
+}
+
+/* wrapper welcome text styles  */
+.wrapper .welcomeText div.an{
+    animation: bounce 1 2s;
+    animation-delay: calc(1.5s * var(--i));  
+}
+
+.wrapper .welcomeText div{
+    color: #fff;
+    font-size: 40px;
+    display: inline-block;
+}
+
+.wrapper .welcomeText div.tc{color: #0f9bb4;}
+
+/* creating @keyframes (jumping animation)*/
+@keyframes bounce {
+    0%   { transform: scale(1,1) translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-55px);}
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    58%  { transform: scale(1,1) translateY(-7px); }
+    65%  { transform: scale(1,1) translateY(0);}
+    100% { transform: scale(1,1) translateY(0);}
+}
+
+/* learn more btn style */
+.wrapper .learn_more{
+    font-size: 17px;
+    border: 2px solid #03e9f4;
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #02b0a7;
+    transition: .5s;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.wrapper .learn_more:hover{
+    /*neon box-shadow*/
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+    background-color: #03e9f4;
+    color: #000;
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
