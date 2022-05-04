@@ -66,3 +66,12 @@ window.onmousemove = () => {
     mouse_circle.style.left = `${getX}px`;
 };
 
+// input  first letter uppercase function
+
+let inpt = document.querySelectorAll('.form form .inpt')[0]
+
+inpt.onkeypress = () => {
+    let get_first_letter = inpt.value.substr(0,1).toUpperCase();
+    let get_all_letters = inpt.value.substr(1);
+    inpt.value = get_first_letter + get_all_letters;
+};
