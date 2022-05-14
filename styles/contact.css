@@ -22,7 +22,7 @@ color: #212529;
     display: flex; 
     align-items: center;
     padding: 50px;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #contact_us .contacts .form form{
@@ -31,7 +31,7 @@ color: #212529;
 }
 
 #contact_us .contacts .form form input{
-    margin-bottom: 7px;
+    margin-bottom: 20px;
 }
 
 #contact_us .contacts .form form .inpt{
@@ -45,6 +45,11 @@ color: #212529;
     font-size: 15px;
     font-family: gilroy-extraBold;
     letter-spacing: 2.5px;
+    transition: 300ms;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
 }
 
 #contact_us .contacts .form form .inpt::placeholder{
@@ -59,8 +64,7 @@ color: #212529;
     transition: none;
     border-color: #008cff;
     outline: 0;
-    margin: 11px 0;
-    box-shadow: 0 0 0 0.25rem rgba(0, 102, 255, 0.425);
+    box-shadow: 0 0 0 0.35rem rgba(0, 102, 255, 0.425);
     transition: 500ms;
     -webkit-transition: 500ms;
     -moz-transition: 500ms;
@@ -79,11 +83,11 @@ color: #212529;
     font-size: 16px;
     border: 2px solid #03e9f4;
     font-family: gilroy-semibold;
-    transform: 1s;
-    -webkit-transform: 1s;
-    -moz-transform: 1s;
-    -ms-transform: 1s;
-    -o-transform: 1s;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
 }
 
 #contact_us .contacts .form form textarea::placeholder{
@@ -98,7 +102,6 @@ color: #212529;
     border-color: #008cff;
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(0, 102, 255, 0.425);
-    margin: 10px 0;
     transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
@@ -133,10 +136,16 @@ color: #212529;
 }
 
 /* img */
-
+#contact_us .contacts .cle{
+    margin-left: 140px;
+}
 #contact_us .contacts .cle p{
-    margin: 5px 0;
+    margin: 15px 0;
     color: #fff;
     font-size: 18px;
+}
 
+#contact_us .contacts .cle img{
+    width: 64px;
+    height: 64px;
 }
