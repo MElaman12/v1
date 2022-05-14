@@ -12,7 +12,7 @@ body{
     background-color: #0e0f3a;
     height: 100%;
     overflow-x: hidden;
-    cursor: url('../icons_img/cursor.ani');
+    cursor: url('../icons_img/cursor.ani'),auto;
 }
 
 p,span,a,div,button{font-family: gilroy-semibold !important;}
