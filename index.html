@@ -30,38 +30,36 @@
                 <a href="#partfolio" id="partfolio_el">Partfolio</a>
                 <a href="#developers">Developers</a>
                 <a href="#contact_us">Contact us</a>
-                <div class="time">
-                    <img src="./icons_img/morning.png" style="position: relative; z-index: 111;" alt="morning|night" class="timeImg">
-                    <span></span>
-                </div>
             </div>
 
             <div class="settings">
-            
-                <img class="stImg" src="./icons_img/settings-icon.png" alt="settings" style="position: relative; z-index: 111;">
-                
-                <div class="st_b">
-                    <div class="tre"></div>
+                <div id="settings">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
 
-                    <!-- Partice on|off button -->
-                    <button class="particleBtn"> 
-                        <img class="particleIcon" src="./icons_img/hover-atom.png" alt="Atom">    
-                        Off particle
-                    </button>
-                    
-                    <!-- disable click effect btn -->
-                    <button class="particleBtn volume">
-                        <img class="particleIcon" src="./icons_img/volume_on.png" alt="Atom">    
-                        Disable click effects
-                    </button>
-                    
-                    <!-- night|white theme -->
-                    <button class="particleBtn setTh n"> <!-- Set theme button! -->
-                        <img class="ntIc" src="./icons_img/white.png" alt="Theme">
-                        White theme
-                    </button>
+                <div class="menu">
+                    <div class="theme_st">
+                        <img class="theme_ic white" src="./icons_img/white.png" alt="">
+                        <span>Theme</span>
+                        <input type="checkbox">
+                    </div>
+
+                    <div class="theme_st">
+                        <img class="theme_ic prJs" src="./icons_img/hover-atom.png" alt="">
+                        <span>Particle</span>
+                        <input type="checkbox">
+                    </div>
+
+                    <div class="theme_st">
+                        <img class="theme_ic volume" src="./icons_img/volume_on.png" alt="">
+                        <span>Click</span>
+                        <input type="checkbox">
+                    </div>
 
                 </div>
+
             </div>
         </div>
     </div>
@@ -75,9 +73,8 @@
             </div>
             <a href="#about_us" class="learn_more">
                 Let's continue
-        </a>
+            </a>
         </div>
-
 
         
     <div class="about_us" id="about_us">
@@ -106,10 +103,7 @@
                         <p class="sh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam numquam ex odit ratione deleniti neque optio corrupti nam officia blanditiis, ut adipisci consequuntur, recusandae vero soluta ea necessitatibus iste veritatis! Et culpa aliquam dolorem aperiam eius ad aliquid consectetur, unde consequuntur voluptate laudantium assumenda iste?</p>
                     </div>
                </div>
-
-
         </div>
-            
 </div>
 
     <!-- partfolio -->
@@ -127,7 +121,7 @@
         <p>Asked Question</p>
         <div class="questions">
             <!-- some items -->
-            <div class="item question1">
+             <div class="item question1">
                 <div class="que1">
                     <img src="./icons_img/sayfiddin.jpg" alt="Sayfiddin">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -161,10 +155,9 @@
     </div>
 
     <!-- Cntact us -->
-
     <div id="contact_us">
         <p class="txt">Contact</p>
-        <div class="contacts">
+        <div class="contacts"> 
             <!-- inputs -->
             <div class="form">
                 <form>
@@ -174,7 +167,7 @@
                     <textarea name="" id="message" cols="30" rows="10" placeholder="Your message*" required></textarea>
                     <input class="submit" type="submit" style="margin-top: 7px;">
                 </form>
-            </div>
+            </div> 
 
             <!-- call || location || email -->
             <div class="cle">
@@ -200,7 +193,7 @@
     <!-- footer -->
     <div class="footer">
         <!-- footer wave animation -->
-        <div class="ocean">
+         <div class="ocean">
             <div class="wave"></div>
             <div class="wave"></div>
             <div class="wave"></div>
@@ -211,13 +204,13 @@
     <script src="./scripts/main.js"></script>
     <!-- ---------- -->
 
-    <!-- animations script -->
-    <script src="./scripts/animate.js"></script>
-    <!-- ----------- -->
-    
     <!-- sounds js -->
     <script src="./scripts/soundsEffect.js"></script>
     <!--  -->
+
+    <!-- animations script -->
+    <script src="./scripts/animate.js"></script>
+    <!-- ----------- -->
 
     <!-- particle scripts -->
     <script class="particleJs" src="./scripts/particle js/particles.js"></script>
