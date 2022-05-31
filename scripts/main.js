@@ -35,12 +35,12 @@ settings.onclick = () => {
             line2.style.display = 'block'
         }else{ line2.style.display = 'none'};
     },200)
-}
+};
 
 // set theme icon
 let theme_ic = document.querySelectorAll('.settings .menu .theme_ic');
 let checkbox = document.querySelectorAll('.settings .menu input');
-let theme_txt = document.querySelectorAll('.settings .menu  span')
+let theme_txt = document.querySelectorAll('.settings .menu  span');
 
 checkbox[0].onclick = () => {
     clickSoundEff()
@@ -97,10 +97,31 @@ checkbox[2].onclick = () => {
 };
 
 // input  first letter uppercase function
-// let inpt = document.querySelectorAll('.form form .inpt')[0]
+let inpt = document.querySelectorAll('.form form .inpt')[0]
 
-// inpt.onkeypress = () => {
-//     let get_first_letter = inpt.value.substr(0,1).toUpperCase();
-//     let get_all_letters = inpt.value.substr(1);
-//     inpt.value = get_first_letter + get_all_letters;
-// };
+inpt.onkeypress = () => {
+    let get_first_letter = inpt.value.substr(0,1).toUpperCase();
+    let get_all_letters = inpt.value.substr(1);
+    inpt.value = get_first_letter + get_all_letters;
+};
+
+let lang_link = document.querySelectorAll('.lang_link');
+let lang_btn = document.querySelector('.lang_btn');
+
+lang_btn.onclick = () => {
+    clickSoundEff()
+    for(let item of lang_link){
+        item.classList.toggle('fl')
+    }
+};
+
+let tt = document.querySelector('.tt');
+let uzb_lang = () => {
+    // <div class="tc" style="--i:0;">W</div><div style="--i:0.1">e</div><div class="tc" style="--i:0.2;">l</div><div style="--i:0.3;">c</div><div class="tc" style="--i:0.4;">o</div><div style="--i:0.5;">m</div><div class="tc" style="--i:0.6;">e</div>
+    // <div style="--i:0.7;"> t</div><div class="tc" style="--i:0.8;">o</div> <div style="--i:0.9;">o</div><div class="tc" style="--i:1;">u</div><div style="--i:1.1;">r</div> <div class="tc" style="--i:1.2;">w</div><div style="--i:1.3;">e</div><div class="tc" style="--i:1.4;">b</div><div style="--i:1.5;">s</div><div class="tc" style="--i:1.6;">i</div><div style="--i:1.7;">t</div><div class="tc" style="--i:1.8;">e</div><div style="--i:1.9;">!</div>
+    const uzb = '<div class="tc" style="--i:0;">X</div><div style="--i:0.1">u</div><div class="tc" style="--i:0.2;">s</div><div style="--i:0.3;">h</div> <div class="tc" style="--i:0.4;"> k </div><div style="--i:0.5;">e</div><div class="tc" style="--i:0.6;">l</div><div style="--i:0.7;">i</div><div class="tc" style="--i:0.8;">b</div><div style="--i:0.9;">s</div><div class="tc" style="--i:1;">i</div><div style="--i:1.1">z</div><div class="tc" style="--i:1.2;">!</div>';
+
+    tt.innerHTML = uzb;
+}
+
+lang_link[0].onclick = () => uzb_lang();
