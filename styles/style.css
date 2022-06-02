@@ -86,12 +86,26 @@ canvas{
 
 
 /* стили сына хидора */
+#header{
+    position: fixed;
+    width: 100%;
+    z-index: 111;
+    transition: 300ms;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+}
+
 .header{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding-top: 20px;
 }
+
+.set_bg{background-color: #0b0c2e;}
+
 
 /* logo some style */
 #header .header .lg span{
@@ -143,7 +157,7 @@ canvas{
 #header .header .settings .line{
     width: 30px;
     height: 3px;
-    background-color: #000;
+    background-color: #007bc2;
     margin: 5px 0;
     transition: 300ms;
     -webkit-transition: 300ms;
@@ -362,10 +376,16 @@ canvas{
     animation-delay: calc(1.5s * var(--i));  
 }
 
+.wrapper .tt{
+    margin: 150px;
+}
+
+
 .wrapper .welcomeText div{
     color: #fff;
     font-size: 40px;
     display: inline-block;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, #110e0e38);
 }
 
 .wrapper .welcomeText div.tc{color: #0f9bb4;}

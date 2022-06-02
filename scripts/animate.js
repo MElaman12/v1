@@ -1,3 +1,10 @@
+window.addEventListener('scroll', function(){
+    const header = document.querySelector('#header')
+    header.classList.toggle('set_bg', window.scrollY > 0)
+    console.log(window.scrollY);
+})
+
+
 // jumping animate!
 let welcomeTextSpan = document.querySelectorAll(".wrapper .welcomeText div")
 
@@ -10,12 +17,13 @@ let jump = () => {
             welcomeTextSpan[i].classList.remove("an")
         },10000)
     }
-}
+};
+
 jump()
 
 
-const partfolio_el = document.querySelector("#partfolio_el"); // <a></a> element
-const partfolio = document.querySelector(".partfolio"); // partfolio 
+const partfolio_el = document.querySelector("#partfolio_el");
+const partfolio = document.querySelector(".partfolio");
 const stImg = document.querySelector('.settings .stImg');
 const scaleValue = 'scale(0)';
 const scaleValue_big = 'scale(1)';
