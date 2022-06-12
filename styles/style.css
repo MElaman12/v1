@@ -1,6 +1,14 @@
 /* import fonts */
 @import url(../fonts/fonts.min.css);
 
+
+html{
+    --magenta: #ff0d9a;
+    --blue: #007bc2;
+    --background: #0e0f3a;
+    --scroll: #252828;
+}
+
 *{
     padding:0px;
     margin:0px;
@@ -9,7 +17,7 @@
 }
 
 body{
-    background-color: #0e0f3a;
+    background-color: var(--background);
     height: 100%;
     overflow-x: hidden;
 }
@@ -22,18 +30,18 @@ body{
 ::-webkit-scrollbar-track {
     box-shadow: inset 0px 2px 10px #ccc;
     border-radius: 10px;
-    background-color: rgb(17, 14, 14);
+    background-color: #110e0e;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #252828;
+    background: var(--scroll);
     border-radius: 10px;
     width: 10px;
     box-shadow: inset 0px -1px 9px #5e6ccb;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #2d3638; 
+    background: var(--scroll); 
 }
 
 p,span,a,div,button,select{font-family: gilroy-semibold !important;}
@@ -90,11 +98,6 @@ canvas{
     position: fixed;
     width: 100%;
     z-index: 111;
-    transition: 300ms;
-    -webkit-transition: 300ms;
-    -moz-transition: 300ms;
-    -ms-transition: 300ms;
-    -o-transition: 300ms;
 }
 
 .header{
@@ -118,35 +121,29 @@ canvas{
     justify-content: space-between;
     width: fit-content;
     padding: 10px 0;
-    z-index: 111;
-    position: relative;
-    overflow: hidden;
-}
-
-/* div time styles */
-#header .header .links .time{display: flex; align-items: center; justify-content: center;}
-#header .header .links .time span{
-    color: #fff;
-    font-size: 22px;
-    position: relative;
-    z-index: 11;
 }
 
 .header .links a{
-    position: relative;
     z-index: 1;
     font-size: 22px;
     color: #0f9bb4;
     cursor: pointer;
     text-decoration: none;
     margin: 0 10px;
-    padding: 10px 0;
-    transition: 500ms;
+    padding: 5px 0;
+    transition: 200ms;
+    -webkit-transition: 200ms;
+    -moz-transition: 200ms;
+    -ms-transition: 200ms;
+    -o-transition: 200ms;
 }
 
 #header .links a:hover{
-    text-decoration: underline;
+    border-bottom: 3px solid var(--magenta);
 }
+
+#header .header .links a:hover span{color: var(--magenta);}
+
 
 /* settings */
 #header .header .settings{
@@ -415,6 +412,25 @@ canvas{
     -moz-transition: .5s;
     -ms-transition: .5s;
     -o-transition: .5s;
+    animation: jump 900ms infinite;
+    -webkit-animation: jump 900ms infinite;
+}
+
+@keyframes jump{
+    0%,100%{
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);
+        -moz-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+}
 }
 
 .wrapper .learn_more:hover{
@@ -435,4 +451,5 @@ canvas{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    animation-play-state: paused;
 }

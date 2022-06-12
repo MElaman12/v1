@@ -1,7 +1,6 @@
 window.addEventListener('scroll', function(){
     const header = document.querySelector('#header')
     header.classList.toggle('set_bg', window.scrollY > 0)
-    console.log(window.scrollY);
 })
 
 

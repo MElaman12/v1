@@ -115,13 +115,3 @@ lang_btn.onclick = () => {
     }
 };
 
-let tt = document.querySelector('.tt');
-let uzb_lang = () => {
-    // <div class="tc" style="--i:0;">W</div><div style="--i:0.1">e</div><div class="tc" style="--i:0.2;">l</div><div style="--i:0.3;">c</div><div class="tc" style="--i:0.4;">o</div><div style="--i:0.5;">m</div><div class="tc" style="--i:0.6;">e</div>
-    // <div style="--i:0.7;"> t</div><div class="tc" style="--i:0.8;">o</div> <div style="--i:0.9;">o</div><div class="tc" style="--i:1;">u</div><div style="--i:1.1;">r</div> <div class="tc" style="--i:1.2;">w</div><div style="--i:1.3;">e</div><div class="tc" style="--i:1.4;">b</div><div style="--i:1.5;">s</div><div class="tc" style="--i:1.6;">i</div><div style="--i:1.7;">t</div><div class="tc" style="--i:1.8;">e</div><div style="--i:1.9;">!</div>
-    const uzb = '<div class="tc" style="--i:0;">X</div><div style="--i:0.1">u</div><div class="tc" style="--i:0.2;">s</div><div style="--i:0.3;">h</div> <div class="tc" style="--i:0.4;"> k </div><div style="--i:0.5;">e</div><div class="tc" style="--i:0.6;">l</div><div style="--i:0.7;">i</div><div class="tc" style="--i:0.8;">b</div><div style="--i:0.9;">s</div><div class="tc" style="--i:1;">i</div><div style="--i:1.1">z</div><div class="tc" style="--i:1.2;">!</div>';
-
-    tt.innerHTML = uzb;
-}
-
-lang_link[0].onclick = () => uzb_lang();

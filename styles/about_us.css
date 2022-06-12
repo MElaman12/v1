@@ -1,20 +1,18 @@
 /* about us text styles */
-.ab_us{
-    font-size: 45px;
-    margin: 0 41%;
-    margin-bottom: 50px;
-    display: flex;
+p.ab_us{
     width: fit-content;
-    border-bottom: 3px solid #28a6e3;
+    font-size: 45px;
+    margin-bottom: 50px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    color: #28a6e3;
+    border-bottom: 3px solid var(--magenta);
 }
 
-.ab_us .a{color: rgb(255, 13, 154)}
-.ab_us .td,.tb{color: #28a6e3;}
-.ab_us .t{margin-right: 10px;}
-/* ----- */
-
-/* color: rgb(255, 13, 154) magenta */
-
+p.ab_us span{
+    color: var(--magenta);
+    margin-left: 10px;
+}
 
 .about_us{
     width: 100%;
@@ -24,7 +22,7 @@
 
 .about_us .box{display: flex;}
 
-.about_us p{
+.about_us .box p{
     color: #fff;
     font-size: 17px;
 }
