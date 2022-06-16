@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
     <div id="particles-js"></div>
     <div class="circle"></div>
     
@@ -117,12 +116,12 @@
 
         <div class="box">
 
-            <div class="some_img code_img">
+            <div class="some_img code_img wow fadeInDownBig">
                 <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80" alt="Code">
             </div>
 
 
-            <div class="some_info">
+            <div class="some_info wow fadeInUpBig">
 
                 <div class="text">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam numquam ex odit ratione deleniti neque optio corrupti nam officia blanditiis, ut adipisci consequuntur, recusandae vero soluta ea necessitatibus iste veritatis! Et culpa aliquam dolorem aperiam eius ad aliquid consectetur, unde consequuntur voluptate laudantium assumenda iste?</p>
@@ -152,7 +151,7 @@
         <div class="questions">
             <!-- some items -->
 
-                <div class="item question1">
+                <div class="item question1  wow jackInTheBox" >
                    <div class="que1">
                        <img class="user" src="./icons_img/sayfiddin.jpg" alt="Sayfiddin">
                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -161,7 +160,7 @@
    
                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum itaque beatae sit corporis consequatur reprehenderit, aliquid ea dolore, nisi sapiente cupiditate assumenda. Quod repudiandae sunt architecto id eaque! <a href="#">To be continued!</a></span>
                </div>
-               <div class="item question1">
+               <div class="item question1  wow rotateInUpRight" >
                    <div class="que1">
                        <img class="user" src="./icons_img/sayfiddin.jpg" alt="Sayfiddin">
                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -172,7 +171,7 @@
                    </span>
                </div>
                
-               <div class="item question1">
+               <div class="item question1 wow rotateInUpLeft">
                    <div class="que1">
                        <img class="user" src="./icons_img/sayfiddin.jpg" alt="Sayfiddin">
                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -189,16 +188,16 @@
 
     <!-- Cntact us -->
     <div id="contact_us">
-        <p class="txt">Contact</p>
+        <p class="txt wow slideInDown">Contact</p>
         <div class="contacts"> 
             <!-- inputs -->
             <div class="form">
                 <form>
-                    <input class="inpt" type="text" placeholder="Name*" required>
-                    <input class="inpt" type="email" placeholder="Email*" required>
+                    <input class="inpt wow fadeInLeftBig" type="text" placeholder="Name*" required>
+                    <input class="inpt wow fadeInRightBig" type="email" placeholder="Email*" required>
                     
-                    <textarea name="" id="message" cols="30" rows="10" placeholder="Your message*" required></textarea>
-                    <input class="submit" type="submit" style="margin-top: 7px;">
+                    <textarea class="wow fadeInLeftBig" name="message" id="message" cols="30" rows="10" placeholder="Your message*" required></textarea>
+                    <input class="submit wow fadeInRightBig" type="submit" style="margin-top: 7px;">
                 </form>
             </div> 
 
@@ -241,14 +240,16 @@
     <script src="./scripts/soundsEffect.js"></script>
     <!--  -->
 
-    <!-- animations-->
-    <script src="./scripts/animate.js"></script>
-    <script src="./scripts/wow.min.js"></script>
-    <!-- ----------- -->
-
     <!-- particle scripts -->
     <script class="particleJs" src="./scripts/particle js/particles.js"></script>
     <script class="particleJs" src="./scripts/particle js/app.js"></script>
     <!-- ------------- -->
+
+    <!-- animations-->
+    <script type="module" src="./scripts/wow.min.js"></script>
+    <script type="module" src="./scripts/animate.js"></script>
+    <!-- ----------- -->
+
+
 </body>
 </html>

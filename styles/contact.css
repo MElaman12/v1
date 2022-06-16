@@ -3,13 +3,13 @@
 }
 
 #contact_us .txt::first-letter{
-    color: #03e9f4;
+    color: var(--magenta);
 }
 
 #contact_us .txt{
     width: fit-content;
     margin: 0 auto;
-    color: #fff;
+    color: #03e9f4;
     font-size: 45px;
     text-align: center;
     border-bottom: 3px solid var(--magenta);
@@ -57,11 +57,10 @@
 }
 
 #contact_us .contacts .form form .inpt:focus{
-    width: 500px;
-    transition: none;
     border-color: #008cff;
     outline: 0;
-    box-shadow: 0 0 0 0.35rem rgba(0, 102, 255, 0.425);
+    box-shadow: 0 0 0 0.35rem #0066ff6c;
+    transition: 500ms;
     transition: 500ms;
     -webkit-transition: 500ms;
     -moz-transition: 500ms;
@@ -94,8 +93,6 @@
 }
 
 #contact_us .contacts .form form textarea:focus{
-    width: 500px;
-    transition: 500ms;
     border-color: #008cff;
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(0, 102, 255, 0.425);

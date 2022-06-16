@@ -1,7 +1,7 @@
 // for lags
-setInterval(() => {
-    console.clear()
-},5000);
+// setInterval(() => {
+//     console.clear()
+// },5000);
 
 
 let mouse_circle = document.querySelector('.circle');
@@ -95,6 +95,22 @@ checkbox[2].onclick = () => {
         clickSound.src = './sounds/click.wav';
     }
 };
+// language
+let lang_link = document.querySelectorAll('.lang_link');
+let lang_btn = document.querySelector('.lang_btn');
+let lang_txt = document.querySelector('.lang_btn p');
+
+lang_btn.onclick = () => {
+    clickSoundEff()
+    for(let item of lang_link){
+        item.classList.toggle('fl')
+    }
+};
+
+lang_txt.onclick = () => {
+    this.style.color = ''
+}
+
 
 // input  first letter uppercase function
 let inpt = document.querySelectorAll('.form form .inpt')[0]
@@ -103,15 +119,5 @@ inpt.onkeypress = () => {
     let get_first_letter = inpt.value.substr(0,1).toUpperCase();
     let get_all_letters = inpt.value.substr(1);
     inpt.value = get_first_letter + get_all_letters;
-};
-
-let lang_link = document.querySelectorAll('.lang_link');
-let lang_btn = document.querySelector('.lang_btn');
-
-lang_btn.onclick = () => {
-    clickSoundEff()
-    for(let item of lang_link){
-        item.classList.toggle('fl')
-    }
 };
 
