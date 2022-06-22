@@ -1,0 +1,244 @@
+@media only screen and (max-width: 1200px) {
+    #header .header .settings .menu{
+        right: -70px;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    #header .header .settings .menu .theme_st span{
+        font-size: 15px;
+    }
+
+    #header .header .settings .menu{
+        right: -50px;
+        padding: 8px;
+    }
+
+    #header .header .settings .menu .theme_st img{
+        width: 28px;
+        height: 28px;
+    }
+
+    #header .header .settings .menu .theme_st input::before{
+        transform: scale(1.14);
+        -webkit-transform: scale(1.14);
+        -moz-transform: scale(1.14);
+        -ms-transform: scale(1.14);
+        -o-transform: scale(1.14);
+    }
+
+    #header .header .settings .menu .theme_st input{
+        width: 55px;
+        height: 23px;
+    }
+
+    #header .header .settings .menu .language p{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .header .links a{
+        font-size: 21px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .header .links a{
+        font-size: 20px;
+    }
+
+    .wrapper .welcomeText div{
+        font-size: 38px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    #header .header .settings .menu{
+        right: -30px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .header .links a{
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    #header .header .settings .line{
+        height: 2.5px;
+    }
+}
+
+@media only screen and (max-width: 725px) {
+    .header .links a{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 710px) {
+    #header .header .settings .menu{
+        right: -20px;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .header .links {
+        display: none;
+    }
+
+    #header .header .settings .menu{
+        display: none;
+    }
+
+    .header{
+        padding: 10px 45px;
+        justify-content: space-between;
+    }
+
+    .wrapper{
+        margin-left: -35px;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .wrapper{
+        margin-left: -40px;
+    }
+}
+
+@media only screen and (max-width: 645px) {
+    .wrapper{
+        margin-left: -45px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .wrapper{
+        margin-left: -65px;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .wrapper{
+        margin-left: -75px;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .wrapper{
+        margin-left: -85px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .wrapper{
+        margin-left: -95px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .wrapper{
+        margin-left: -105px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .wrapper .welcomeText div{
+        font-size: 36px;
+    }
+    
+    .mobile-settings img.close{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .wrapper .welcomeText div{
+        font-size: 34px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .wrapper .welcomeText div{
+        font-size: 33px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .wrapper .welcomeText div{
+        font-size: 31px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .wrapper .learn_more{
+        padding: 8px;
+    }
+}
+
+@media only screen and (max-width: 433px) {
+    .wrapper{
+        margin-left: -122px;
+    }
+}
+
+@media only screen and (max-width: 422px) {
+    .wrapper{
+        margin-left: -120px;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .wrapper{
+        margin-left: -130px;
+    }
+
+    .wrapper .welcomeText div{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .wrapper{margin-left: -126px;}
+    
+    .wrapper .welcomeText div{
+        font-size: 27px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .wrapper{
+        margin-left: -130px;
+    }
+}
+
+@media only screen and (max-width: 355px) {
+    .wrapper{
+        margin-left: -133px;
+    }
+}
+
+@media only screen and (max-width: 355px) {
+    .wrapper .welcomeText div{
+        font-size: 26px;
+    }
+
+    .mobile-settings img.close{
+        right: 35px;
+    }
+}
+
+@media only screen and (max-width: 335px) {
+    .wrapper .welcomeText div{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .wrapper{
+        margin-left: -136px;
+    }
+}

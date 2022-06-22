@@ -1,9 +1,3 @@
-// for lags
-// setInterval(() => {
-//     console.clear()
-// },5000);
-
-
 let mouse_circle = document.querySelector('.circle');
 window.onmousemove = () => {
     let e = window.event;
@@ -22,19 +16,35 @@ let line1 = document.querySelectorAll('.settings .line')[0];
 let line2 = document.querySelectorAll('.settings .line')[1];
 let line3 = document.querySelectorAll('.settings .line')[2];
 
+
 settings.onmouseenter = () => playSound()
 
+// mobile
+let mobile_heador = document.querySelector('.mobile-settings');
+let links = document.querySelectorAll('.mobile-settings .item_links a');
+
+for(let i = 0; i < links;i++){
+    links[i].onclick = () => {
+        mobile_heador.style.display = 'none';
+    }
+};
+
+
 settings.onclick = () => {
-    setting_menu.classList.toggle('y')
-    line2.classList.toggle('d_line');
-    line1.classList.toggle('line1')
-    line3.classList.toggle('line3')
+    if(document.body.clientWidth + 15 <= 670){
+        mobile_heador.style.display = 'block';
+    } else{
+        setting_menu.classList.toggle('y')
+        line2.classList.toggle('d_line');
+        line1.classList.toggle('line1')
+        line3.classList.toggle('line3')
+        setTimeout(() => {
+            if(line2.style.display == 'none') {
+                line2.style.display = 'block'
+            }else{ line2.style.display = 'none'};
+        },200)
+    }
     clickSoundEff()
-    setTimeout(() => {
-        if(line2.style.display == 'none') {
-            line2.style.display = 'block'
-        }else{ line2.style.display = 'none'};
-    },200)
 };
 
 // set theme icon
@@ -42,59 +52,56 @@ let theme_ic = document.querySelectorAll('.settings .menu .theme_ic');
 let checkbox = document.querySelectorAll('.settings .menu input');
 let theme_txt = document.querySelectorAll('.settings .menu  span');
 
-checkbox[0].onclick = () => {
-    clickSoundEff()
-    if(theme_ic[0].classList.value == 'theme_ic black'){
-        theme_ic[0].src= "./icons_img/white.png"
-        theme_ic[0].classList.add('white')
-        theme_ic[0].classList.remove('black')
-        theme_txt[0].style.color = '#fff'
-    }else if(theme_ic[0].classList.value == 'theme_ic white'){
-        theme_ic[0].src= "./icons_img/nightTh.png"
-        theme_ic[0].classList.remove('white')
-        theme_ic[0].classList.add('black')
-        theme_txt[0].style.color = '#03e9f4'
-    }
-};
+const default_src = [
+    './icons_img/white.png',
+    './icons_img/hover-atom.png',
+    './icons_img/volume_on.png'
+]
 
+const new_src = [
+    './icons_img/nightTH.png',
+    './icons_img/atom.png',
+    './icons_img/disable_volume.png'
+]
 
-checkbox[1].onclick = () => {
-    let canvas = document.querySelector('canvas');
-    clickSoundEff()
-    if(theme_ic[1].classList.value == 'theme_ic prJs'){
-        theme_ic[1].src= "./icons_img/atom.png"
-        theme_ic[1].classList.add('prJsof')
-        theme_ic[1].classList.remove('prJs')
-        theme_txt[1].style.color = '#03e9f4'
-        canvas.style.width = '0'
-    } else if(theme_ic[1].classList.value == 'theme_ic prJsof'){
-        theme_ic[1].src= "./icons_img/hover-atom.png"
-        theme_ic[1].classList.add('prJs')
-        theme_ic[1].classList.remove('prJsof')
-        theme_txt[1].style.color = '#fff'
-        canvas.style.width = '100%'
-    }
-};
+for(let i = 0; i < checkbox.length;i++){
+    checkbox[i].onclick = () => {
 
-checkbox[2].onclick = () => {
-    let canvas = document.querySelector('canvas');
-    clickSoundEff()
-    if(theme_ic[2].classList.value == 'theme_ic volume'){
-        theme_ic[2].src= "./icons_img/disable_volume.png"
-        theme_ic[2].classList.add('dis_volume')
-        theme_ic[2].classList.remove('volume')
-        theme_txt[2].style.color = '#03e9f4'
-        clickSound.src = '';
-        cr_audio.src = '';
-    } else if(theme_ic[2].classList.value == 'theme_ic dis_volume'){
-        theme_ic[2].src= "./icons_img/volume_on.png"
-        theme_ic[2].classList.add('volume')
-        theme_ic[2].classList.remove('dis_volume')
-        theme_txt[2].style.color = '#fff'
-        cr_audio.src = './sounds/click2.wav';
-        clickSound.src = './sounds/click.wav';
+        if(theme_txt[i].classList.value == 'cyan'){
+            theme_ic[i].src = default_src[i]
+            theme_txt[i].classList.remove('cyan')
+
+            if(i == 1){
+                let canvas = document.querySelector('canvas');
+                canvas.style.width = '100%'
+            } else if (i == 2){
+                cr_audio.src = './sounds/click2.wav';
+                clickSound.src = './sounds/click.wav';
+            }
+
+        } else{
+            theme_txt[i].classList.add('cyan');
+            theme_ic[i].src = new_src[i];
+
+            if(i == 1){
+                let canvas = document.querySelector('canvas');
+                canvas.style.width = '0px'
+            } else if (i == 2){
+                cr_audio.src = '';
+                clickSound.src = '';
+            }
+        }
     }
-};
+}
+
+// close
+let close = document.querySelector('img.close');
+
+close.onclick = () => {
+    mobile_heador.style.display = 'none'
+    clickSoundEff()
+}
+
 // language
 let lang_link = document.querySelectorAll('.lang_link');
 let lang_btn = document.querySelector('.lang_btn');
@@ -108,8 +115,8 @@ lang_btn.onclick = () => {
 };
 
 lang_txt.onclick = () => {
-    this.style.color = ''
-}
+    lang_txt.classList.toggle('cyan')
+};
 
 
 // input  first letter uppercase function
@@ -121,3 +128,6 @@ inpt.onkeypress = () => {
     inpt.value = get_first_letter + get_all_letters;
 };
 
+window.addEventListener("resize", function(event) {
+    console.log(document.body.clientWidth + 15 +' wide by ' + document.body.clientHeight+' high');
+})

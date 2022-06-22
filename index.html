@@ -13,12 +13,53 @@
     <link rel="stylesheet" href="./styles/contact.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/animate.css">
+    <link rel="stylesheet" href="./styles/media/home_media.css">
 </head>
 
 <body>
     <div id="particles-js"></div>
     <div class="circle"></div>
-    
+    <!-- mobile heador|settings -->
+
+    <div class="mobile-settings">
+        
+        <img class="close" src="./icons_img/close.png" alt="close">
+
+        <div class="item_links">
+            <a href="#home">
+                <img src="./icons_img/home.png" alt="">
+                <span>H</span>ome
+            </a>
+            
+            <a href="#partfolio" id="partfolio_el">
+                <img src="./icons_img/partfolio.png" alt="">
+                <span>P</span>artfolio
+            </a>
+            
+            <a href="#about_us">
+                <img src="./icons_img/about_us.png" alt="">
+                <span>A</span>bout us
+            </a>
+            
+            <a href="#developers">
+                <img src="./icons_img/user.png" alt="">
+                <span>D</span>evelopers
+            </a>
+            
+            <a href="#contact_us">
+                <img src="./icons_img/mail.png" alt="">
+                <span>C</span>ontact us
+            </a>
+            
+     </div>
+     <hr>
+
+            <div class="box">
+
+        </div>
+
+    </div>
+
     <div id="header">
         <div class="header">
             <div class="lg">
@@ -34,13 +75,14 @@
                 <a href="#contact_us"><span>C</span>ontact us</a>
             </div>
 
+
             <div class="settings">
                 <div id="settings">
                     <div class="line"></div>
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-
+                
                 <div class="menu">
                     <div class="theme_st">
                         <img class="theme_ic white" src="./icons_img/white.png" alt="">
@@ -94,18 +136,28 @@
             </div>
         </div>
     </div>
-        
+
+
         <div class="wrapper" id="home">
-            <div class="welcomeText">
-                <div class="tt">
-                    <div class="tc" style="--i:0;">W</div><div style="--i:0.1">e</div><div class="tc" style="--i:0.2;">l</div><div style="--i:0.3;">c</div><div class="tc" style="--i:0.4;">o</div><div style="--i:0.5;">m</div><div class="tc" style="--i:0.6;">e</div>
-                   <div style="--i:0.7;"> t</div><div class="tc" style="--i:0.8;">o</div> <div style="--i:0.9;">o</div><div class="tc" style="--i:1;">u</div><div style="--i:1.1;">r</div> <div class="tc" style="--i:1.2;">w</div><div style="--i:1.3;">e</div><div class="tc" style="--i:1.4;">b</div><div style="--i:1.5;">s</div><div class="tc" style="--i:1.6;">i</div><div style="--i:1.7;">t</div><div class="tc" style="--i:1.8;">e</div><div style="--i:1.9;">!</div>
+            <div class="box">
+
+                <div class="welcomeText">
+                    <div class="tt">
+                        <div class="tc" style="--i:0;">W</div><div style="--i:0.1">e</div><div class="tc" style="--i:0.2;">l</div><div style="--i:0.3;">c</div><div class="tc" style="--i:0.4;">o</div><div style="--i:0.5;">m</div><div class="tc" style="--i:0.6;">e</div>
+                       <div style="--i:0.7;"> t</div><div class="tc" style="--i:0.8;">o</div> <div style="--i:0.9;">o</div><div class="tc" style="--i:1;">u</div><div style="--i:1.1;">r</div> <div class="tc" style="--i:1.2;">w</div><div style="--i:1.3;">e</div><div class="tc" style="--i:1.4;">b</div><div style="--i:1.5;">s</div><div class="tc" style="--i:1.6;">i</div><div style="--i:1.7;">t</div><div class="tc" style="--i:1.8;">e</div><div style="--i:1.9;">!</div>
+                    </div>
                 </div>
+
+                <div class="more">
+                    <a href="#about_us" class="learn_more">
+                        Let's continue
+                    </a>
+                </div>
+
             </div>
-            <a href="#about_us" class="learn_more">
-                Let's continue
-            </a>
         </div>
+
+
 
         
     <div class="about_us" id="about_us">
@@ -121,7 +173,7 @@
             </div>
 
 
-            <div class="some_info wow fadeInUpBig">
+            <div class="some_info wow fadeInUpBig" style="display: none;">
 
                 <div class="text">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam numquam ex odit ratione deleniti neque optio corrupti nam officia blanditiis, ut adipisci consequuntur, recusandae vero soluta ea necessitatibus iste veritatis! Et culpa aliquam dolorem aperiam eius ad aliquid consectetur, unde consequuntur voluptate laudantium assumenda iste?</p>
@@ -216,7 +268,7 @@
                 
                 <div class="call">
                     <img src="./icons_img/telegam.png" alt="">
-                    <p>https://t.me/shakhram_rabbimov</p>
+                    <!-- <p>https://t.me/shakhram_rabbimov</p> -->
                 </div>
             </div>
         </div>
@@ -246,8 +298,8 @@
     <!-- ------------- -->
 
     <!-- animations-->
-    <script type="module" src="./scripts/wow.min.js"></script>
-    <script type="module" src="./scripts/animate.js"></script>
+    <!-- <script type="module" src="./scripts/wow.min.js"></script> -->
+    <script  src="./scripts/animate.js"></script>
     <!-- ----------- -->
 
 
