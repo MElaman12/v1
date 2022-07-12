@@ -1,4 +1,5 @@
 #contact_us {
+    position: relative;
     margin-top: 150px;
 }
 
@@ -38,7 +39,7 @@
     color: #00ffb3f6;
     outline: none;
     border: 2px solid #03e9f4;
-    background-color: #03e8f44d;
+    background-color: var(--background);
     font-size: 15px;
     font-family: gilroy-extraBold;
     letter-spacing: 2.5px;
@@ -56,23 +57,34 @@
     letter-spacing: 0px;
 }
 
-#contact_us .contacts .form form .inpt:focus{
+#contact_us .contacts .form form .inpt:focus,
+#contact_us .contacts .form form textarea:focus{
     border-color: #008cff;
     outline: 0;
-    box-shadow: 0 0 0 0.35rem #0066ff6c;
+    box-shadow: 0 0 0 0.2rem #0066ff6c;
     transition: 500ms;
     transition: 500ms;
     -webkit-transition: 500ms;
     -moz-transition: 500ms;
     -ms-transition: 500ms;
     -o-transition: 500ms;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#contact_us .contacts .form form .inpt:hover,
+#contact_us .contacts .form form textarea:hover{
+    border: 2px solid #0a3783;
 }
 
 #contact_us .contacts .form form textarea{
-    width: 450px;
+    max-width: 450px;
     height: 80px;
     outline: none;
-    background-color: #03e8f44d;
+    background-color: var(--background);
     padding: 10px;
     color: #fff;
     letter-spacing: 2px;
@@ -90,17 +102,6 @@
     color: #fff;
     letter-spacing: 0px;
     font-family: gilroy-semibold;
-}
-
-#contact_us .contacts .form form textarea:focus{
-    border-color: #008cff;
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(0, 102, 255, 0.425);
-    transition: 1s;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
 }
 
 #contact_us .contacts .form form .submit{
@@ -129,17 +130,24 @@
     -o-transform: rotate(2deg);
 }
 
-/* img */
-#contact_us .contacts .cle{
-    margin-left: 140px;
-}
-#contact_us .contacts .cle p{
-    margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
+/* links */
+#contact_us .left a, #contact_us .right a{
+    display: block;
 }
 
-#contact_us .contacts .cle img{
-    width: 64px;
-    height: 64px;
+#contact_us .left a:nth-child(2), #contact_us .right a:nth-child(2){
+    margin: 20px 0;
+}
+
+#contact_us .left img, #contact_us .right img{
+    width: 40px;
+    height: 40px;
+    filter: contrast(0.7) brightness(0.7);
+    -webkit-filter: contrast(0.7) brightness(0.7);
+}
+
+#contact_us .left img:hover,
+#contact_us .right img:hover{
+    filter: contrast(1) brightness(1);
+    -webkit-filter: contrast(1) brightness(1);
 }

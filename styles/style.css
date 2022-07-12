@@ -5,7 +5,7 @@
 html{
     --magenta: #ff0d9a;
     --blue: #007bc2;
-    --background: #0e0f3a;
+    --background: #0b081e;
     --scroll: #252828;
     --cyan: #03e9f4;
 }
@@ -44,7 +44,8 @@ body{
     background: var(--scroll); 
 }
 
-p,span,a,div,button,select{font-family: gilroy-semibold !important;}
+p,span,a,div,button,select{font-family: gilroy-semibold;}
+
 p::selection,span::selection,a::selection,button::selection,div::selection,img::selection{
     color: #ffff00a1;
     background: #e5ff003f;
@@ -99,16 +100,21 @@ canvas{
     position: fixed;
     top: 0;
     z-index: 111;
+    transition: 200ms;
+    -webkit-transition: 200ms;
+    -moz-transition: 200ms;
+    -ms-transition: 200ms;
+    -o-transition: 200ms;
 }
 
 .header{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding-top: 20px;
+    padding: 10px;
 }
 
-.set_bg{background-color: #0b0c2e;}
+.set_bg{background-color: #09061a;}
 .cyan{color: var(--cyan) !important;}
 
 /* logo some style */
@@ -203,7 +209,8 @@ canvas{
     width: fit-content;
     height: fit-content;
     position: absolute;
-    background-color: #007bc2;
+    top: 44px;
+    background-color: #0b0c2e;
     transition: 300ms;
     -webkit-transition: 300ms;
     -moz-transition: 300ms;
@@ -215,6 +222,7 @@ canvas{
     -ms-transform: translateY(50px);
     -o-transform: translateY(50px);
     opacity: 0;
+    display: none;
     padding: 10px;
 }
 
@@ -279,11 +287,11 @@ canvas{
     top: 0;
     left: 0;
     background-color: #fff;
-    transition: .5s;
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s;
+    transition: .25s;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
     transform: scale(1.15);
     -webkit-transform: scale(1.15);
     -moz-transform: scale(1.15);
@@ -302,6 +310,7 @@ canvas{
     -moz-transition: .5s;
     -ms-transition: .5s;
     -o-transition: .5s;
+    color: #fff;
 }
 
 #header .header .settings .menu .language p{
@@ -314,11 +323,26 @@ canvas{
 
 #header .header .settings .menu .language p img{
     width: 20px;
-    transform: rotate(90deg) translateY(-6px);
-    -webkit-transform: rotate(90deg) translateY(-6px);
-    -moz-transform: rotate(90deg) translateY(-6px);
-    -ms-transform: rotate(90deg) translateY(-6px);
-    -o-transform: rotate(90deg) translateY(-6px);
+    margin-left: 10px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+
+    transition: 300ms;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+}
+
+.rt{
+    transform:rotate(0deg) !important;
+    -webkit-transform:rotate(0deg) !important;
+    -moz-transform:rotate(0deg) !important;
+    -ms-transform:rotate(0deg) !important;
+    -o-transform:rotate(0deg) !important;
 }
 
 #header .header .settings .menu .language .lb{
@@ -331,7 +355,7 @@ canvas{
     align-items: center;
     font-size: 18px;
     text-decoration: none;
-    color: var(--cyan);
+    color: #fff;
     transition: .3s;
     -webkit-transition: .3s;
     -moz-transition: .3s;

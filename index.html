@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>poiredeV</title>
-    <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/about_us.css">
     <link rel="stylesheet" href="./styles/partfolio.css">
     <link rel="stylesheet" href="./styles/developers.css">
@@ -97,7 +97,7 @@
                     </div>
 
                     <div class="theme_st">
-                        <img class="theme_ic volume" src="./icons_img/volume_on.png" alt="">
+                        <img class="theme_ic volume" src="./icons_img/volume.png" alt="">
                         <span>Click</span>
                         <input type="checkbox">
                     </div>
@@ -173,7 +173,7 @@
             </div>
 
 
-            <div class="some_info wow fadeInUpBig" style="display: none;">
+            <div class="some_info wow fadeInUpBig">
 
                 <div class="text">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam numquam ex odit ratione deleniti neque optio corrupti nam officia blanditiis, ut adipisci consequuntur, recusandae vero soluta ea necessitatibus iste veritatis! Et culpa aliquam dolorem aperiam eius ad aliquid consectetur, unde consequuntur voluptate laudantium assumenda iste?</p>
@@ -184,7 +184,32 @@
                     </div>
 
                </div>
-        </div>
+            
+            </div>
+            <div class="vid_box">
+                
+                <div class="vid_txt">
+                    <p id="hi">
+                        
+                    </p>
+
+                    <p>
+                        Unda bizni sayt siz uchun. Siz o'zingizga kerak bo'lgan mavzuga maket buyurtma qilishingiz mumkin, yoki bizda tayyor maketlardan o'zingizga yoqqanini tanlab olib.
+                    </p>
+
+                    <p>
+                        Siz xohlagan dizayn va animatsiyada qilib beramiz.
+                    </p>
+
+                    <a href="#contact_us">Buyurtma berish uchun bu erga bosing!</a>
+                </div>
+
+                <div class="vid">
+                    <video src="./video/NEFFEX - Unstoppable 👊 (Copyright Free).mp4" controls muted width="650"></video>
+                </div>
+
+
+            </div>
 </div>
 
     <!-- partfolio -->
@@ -199,7 +224,7 @@
 
         <!-- developers -->
     <div class="developers" id="developers">
-        <p> <span>A</span>sked <span>Q</span>uestion</p>
+        <p> <span>D</span>evelopers</p>
         <div class="questions">
             <!-- some items -->
 
@@ -241,7 +266,23 @@
     <!-- Cntact us -->
     <div id="contact_us">
         <p class="txt wow slideInDown">Contact</p>
+        
         <div class="contacts"> 
+        
+            <div class="left">
+            <a href="#">
+                <img src="./icons_img/discord.svg" alt="">
+            </a>
+
+            <a href="#">
+                <img src="./icons_img/telegram.svg" alt="">
+            </a>
+
+            <a href="#">
+                <img src="./icons_img/instagram.svg" alt="">
+            </a>
+
+            </div>
             <!-- inputs -->
             <div class="form">
                 <form>
@@ -252,26 +293,24 @@
                     <input class="submit wow fadeInRightBig" type="submit" style="margin-top: 7px;">
                 </form>
             </div> 
-
-            <!-- call || location || email -->
-            <div class="cle">
-                <div class="email">
-                    <img src="./icons_img/email.png" alt="">
-                    <p>shahram09@mail.ru</p>
-                </div>
-
-                
-                <div class="location">
-                    <img src="./icons_img/location.png" alt="">
-                    <p>Uzbekistan,Samarkand</p>
-                </div>
-                
-                <div class="call">
-                    <img src="./icons_img/telegam.png" alt="">
-                    <!-- <p>https://t.me/shakhram_rabbimov</p> -->
-                </div>
-            </div>
+        
+        <div class="right">
+            
+            <a href="#">
+                <img src="./icons_img/github.svg" alt="">
+            </a>
+            
+            <a href="#">
+                <img src="./icons_img/whatsapp.svg" alt="">
+            </a>
+            
+            <a href="#">
+                <img src="./icons_img/discord.svg" alt="">
+            </a>
+            
         </div>
+    </div>
+
     </div>
 
     <!-- footer -->
@@ -300,6 +339,8 @@
     <!-- animations-->
     <!-- <script type="module" src="./scripts/wow.min.js"></script> -->
     <script  src="./scripts/animate.js"></script>
+    <script src="https://unpkg.com/typeit@8.6.0/dist/index.umd.js"></script>
+    <script src="./scripts/type_anim.js"></script>
     <!-- ----------- -->
 
 

@@ -23,7 +23,7 @@ settings.onmouseenter = () => playSound()
 let mobile_heador = document.querySelector('.mobile-settings');
 let links = document.querySelectorAll('.mobile-settings .item_links a');
 
-for(let i = 0; i < links;i++){
+for(let i = 0; i < links.length;i++){
     links[i].onclick = () => {
         mobile_heador.style.display = 'none';
     }
@@ -34,17 +34,34 @@ settings.onclick = () => {
     if(document.body.clientWidth + 15 <= 670){
         mobile_heador.style.display = 'block';
     } else{
-        setting_menu.classList.toggle('y')
+        line1.classList.toggle('line1');
         line2.classList.toggle('d_line');
-        line1.classList.toggle('line1')
-        line3.classList.toggle('line3')
+        line3.classList.toggle('line3');
+        
         setTimeout(() => {
             if(line2.style.display == 'none') {
-                line2.style.display = 'block'
-            }else{ line2.style.display = 'none'};
-        },200)
-    }
-    clickSoundEff()
+                line2.style.display = 'block';
+                3
+                setting_menu.classList.remove('y');
+                
+                setTimeout(() => {
+                    setting_menu.style.display = 'none';
+                },200)
+
+                
+            }else{ 
+                line2.style.display = 'none';
+                setting_menu.style.display = 'block';
+
+                setTimeout(() => {
+                    setting_menu.classList.add('y');
+                },50)
+            };
+        },200);
+
+    };
+
+    clickSoundEff();
 };
 
 // set theme icon
@@ -55,7 +72,7 @@ let theme_txt = document.querySelectorAll('.settings .menu  span');
 const default_src = [
     './icons_img/white.png',
     './icons_img/hover-atom.png',
-    './icons_img/volume_on.png'
+    './icons_img/volume.png'
 ]
 
 const new_src = [
@@ -106,6 +123,29 @@ close.onclick = () => {
 let lang_link = document.querySelectorAll('.lang_link');
 let lang_btn = document.querySelector('.lang_btn');
 let lang_txt = document.querySelector('.lang_btn p');
+let lang_arrow = document.querySelector('.lang_btn p img');
+let languages_span = document.querySelectorAll('.header .settings .menu .language a');
+
+
+for(let i = 0; i < languages_span.length; i++){
+    languages_span[i].addEventListener('click', () => {
+        
+        if(languages_span[0].classList.value == 'lang_link fl cyan'){
+            languages_span[0].classList.remove('cyan');
+            languages_span[i].classList.add('cyan')
+        }
+        else if(languages_span[1].classList.value == 'lang_link fl cyan'){
+            languages_span[1].classList.remove('cyan');
+            languages_span[i].classList.add('cyan')
+        }
+        else if(languages_span[2].classList.value == 'lang_link fl cyan'){
+            languages_span[2].classList.remove('cyan');
+            languages_span[i].classList.add('cyan')
+        }
+
+        languages_span[i].classList.add('cyan');
+    })
+};
 
 lang_btn.onclick = () => {
     clickSoundEff()
@@ -115,9 +155,11 @@ lang_btn.onclick = () => {
 };
 
 lang_txt.onclick = () => {
-    lang_txt.classList.toggle('cyan')
+    lang_txt.classList.toggle('cyan');
+    let checkSrc = lang_arrow.classList.value == '' ? './icons_img/arrow2.svg' : './icons_img/arrow.svg';
+    lang_arrow.classList.toggle('rt')
+    lang_arrow.src = checkSrc;
 };
-
 
 // input  first letter uppercase function
 let inpt = document.querySelectorAll('.form form .inpt')[0]
